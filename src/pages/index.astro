@@ -1,0 +1,55 @@
+---
+import Navbar from "../components/Navbar";
+import ToTop from "../components/ToTop";
+import Homeproject from "../components/Homeproject.astro";
+import * as data from "../data/projectdata.json";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jed Borseth - Portfolio</title>
+  </head>
+
+  <body class="bg-neutral-900 scroll-smooth">
+    <span id="top"></span>
+    <Navbar client:load />
+    <main>
+      <section
+        id="hero"
+        class="min-h-screen grid grid-rows-2 place-items-center"
+      >
+        <div
+          class="text-5xl sm:text-8xl md:text-9xl xl:text-[12rem] font-medium pl-[5%] w-full flex flex-wrap transition-all md:pt-20"
+        >
+          <h2 class="w-full text-violet-400">Hi, I'm</h2><h1
+            class="w-full text-white"
+          >
+            Jed Borseth
+          </h1>
+          <span
+            class="text-xs md:text-sm w-full md:pl-5 pt-5 text-violet-400 transition-all font-mono"
+          >
+            Front-End Web Developer 🤖 / Type Safety Officer 👮‍♂️ / Reactjs Wizard
+            🧙 /
+          </span>
+        </div>
+        <button
+          class="rounded-2xl px-10 py-5 bg-violet-600 w-48 text-white hover:scale-105 transition-all max-h-20 justify-self-center"
+          >View Gallery <span class="text-xs italic text-gray-200"
+            >"Built Using Threejs"</span
+          >
+        </button>
+      </section>
+      <hr class="w-10/12 m-auto bg-white border-none h-[2px] rounded" />
+      <ToTop client:load />
+      <section class="" id="projects">
+        <Homeproject project={data.project1} />
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
