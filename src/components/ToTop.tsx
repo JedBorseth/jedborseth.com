@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
 const ToTop = () => {
   let scrolling = false;
   useEffect(() => {
@@ -30,7 +29,7 @@ const ToTop = () => {
           animateScroll();
         }}
       >
-        <AiOutlineArrowUp className="p-1 text-6xl" />
+        <div className="p-1 text-6xl"> ^</div>
       </div>
     </>
   );
