@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { FiMenu } from "react-icons/fi";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
