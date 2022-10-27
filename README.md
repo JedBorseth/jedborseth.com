@@ -1,4 +1,4 @@
-# Astro with Tailwind
+# Jed Borseth Portfolio Site
 
 ```
 npm create astro@latest -- --template with-tailwindcss
