@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FiMenu } from "react-icons/fi";
+// import { FiMenu } from "react-icons/fi";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,12 +22,14 @@ const Navbar = () => {
                 <li>MAKE LOGO HERE</li>
               </a>
             </div>
-            <FiMenu
+            <div
               className="mr-10 text-lg"
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
-            />
+            >
+              |||
+            </div>
             {menuOpen && (
               <div className="absolute top-12 right-0 flex w-screen animate-[opacity_250ms_ease-in-out] flex-col gap-5 border-t-2 border-violet-600 bg-black py-5 text-center">
                 <a href="" className="hover:text-gray-600">
