@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile1, setIsMobile] = useState(() => {
+    if (isMobile) {
+      return true;
+    } else {
+      return false;
+    }
+  });
   const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const listener = window.matchMedia("(max-width: 767px)");
     setIsMobile(listener.matches);
@@ -13,7 +21,7 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      {isMobile ? (
+      {isMobile1 ? (
         <nav className="sticky top-0 border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <div className="pl-[5%]">

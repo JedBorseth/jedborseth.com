@@ -8,7 +8,7 @@
     },
     "techTitles": "NextJS, SCSS, Supabase, NextAuth",
     "introText": "This project was done in groups of 4 in the BCIT Front-End Developer program with the goal being to create a movie database that could save a users favorites and display movies from the TMDB API, the method of achieving this was left to each group",
-    "imgPath": "/images/projectScreenshos/moviedatabase-home.png",
+    "image": "../projects/moviedb/home.png",
     "learned": {
       "title": "Coding in a team"
     }
