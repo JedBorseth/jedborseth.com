@@ -5,7 +5,7 @@ import Homeproject from "../components/Homeproject.astro";
 import * as data from "../data/projectdata.json";
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -14,15 +14,12 @@ import * as data from "../data/projectdata.json";
     <title>Jed Borseth - Portfolio</title>
   </head>
 
-  <body class="bg-neutral-900 scroll-smooth">
+  <body class="bg-neutral-900">
     <Navbar client:load />
     <main>
-      <section
-        id="hero"
-        class="min-h-screen grid grid-rows-2 place-items-center"
-      >
+      <section id="hero" class="min-h-screen grid grid-rows-2 justify-center">
         <div
-          class="text-5xl sm:text-8xl md:text-9xl xl:text-[12rem] font-medium pl-[5%] w-full flex flex-wrap transition-all md:pt-20"
+          class="text-5xl sm:text-8xl md:text-9xl xl:text-[12rem] font-medium pl-[5%] w-full flex flex-wrap transition-all md:pt-20 self-center"
         >
           <h2 class="w-full text-violet-400">Hi, I'm</h2><h1
             class="w-full text-white"
@@ -37,18 +34,61 @@ import * as data from "../data/projectdata.json";
           </span>
         </div>
         <button
-          class="rounded-2xl px-10 py-5 bg-violet-500 w-48 text-white hover:scale-105 transition-all max-h-20 justify-self-center"
+          class="rounded-2xl px-10 py-5 bg-violet-500 w-48 text-white hover:scale-105 transition-all max-h-20 justify-self-center md:self-center"
           >View Gallery <span class="text-xs italic text-gray-200"
             >"Built Using Threejs"</span
           >
         </button>
       </section>
-      <hr class="w-10/12 m-auto bg-white border-none h-[2px] rounded" />
-      <ToTop client:load />
+      <hr class="w-11/12 m-auto bg-white border-none h-[2px] rounded" />
+      <ToTop client:idle />
+      <section id="navigation" class="js-show-on-scroll">
+        <div
+          class="w-full h-12 flex justify-evenly text-white underline decoration-violet-500 underline-offset-8 items-center mb-10"
+        >
+          <a href="#project-1" class="hover:decoration-violet-300"
+            >Movie Database</a
+          >
+          <a href="#project-2" class="hover:decoration-violet-300">Project 2</a>
+        </div>
+        <div class="flex">
+          <hr
+            class="w-[40%] m-auto bg-white border-none h-[2px] rounded mb-20"
+          />
+          <a
+            href=""
+            class="text-white underline decoration-violet-500 underline-offset-8 -mt-3 w-max hover:decoration-violet-300"
+            >View All</a
+          >
+          <hr
+            class="w-[40%] m-auto bg-white border-none h-[2px] rounded mb-20"
+          />
+        </div>
+      </section>
       <section class="" id="projects">
         <Homeproject project={data.project1} />
       </section>
     </main>
     <footer></footer>
+    <script>
+      // Codepen for animate opacity on scroll - https://codepen.io/jamesdoc/pen/qBbeOym
+      const callback = function (entries: any[]) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-[opacity_1s_ease-in]");
+          } else {
+            entry.target.classList.remove("animate-[opacity_1s_ease-in]");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback);
+
+      const targets = document.querySelectorAll(".js-show-on-scroll");
+      targets.forEach(function (target) {
+        target.classList.add("opacity-1");
+        observer.observe(target);
+      });
+    </script>
   </body>
 </html>
