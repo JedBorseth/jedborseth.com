@@ -1,0 +1,75 @@
+---
+---
+
+<footer class="text-white h-64 bg-neutral-800 py-5 bg-opacity-30">
+  <nav
+    aria-label="Footer Navigation"
+    role="navigation"
+    class="grid justify-evenly h-36 grid-cols-3 md:px-12 px-3"
+  >
+    <div id="Pages" aria-label="Footer Page Navigation">
+      <h2 class="text-xl underline decoration-violet-400">Pages</h2>
+      <ul class="grid h-full items-center md:text-sm text-xs font-mono">
+        <li><a href="./"> Home</a></li>
+        <li><a href="./about">About</a></li>
+        <li><a href="./projects">Projects</a></li>
+      </ul>
+    </div>
+    <div id="Projects" aria-label="Project Page Navigation" class="text-center">
+      <h2 class="text-xl underline decoration-violet-400">Projects</h2>
+      <ul class="grid h-full items-center md:text-sm text-xs font-mono">
+        <li>MovieDB</li>
+        <li>3D Gallery</li>
+        <li>Spotify Clone</li>
+      </ul>
+    </div>
+    <div
+      id="Social Media"
+      aria-label="Social Media Footer Navigation"
+      class="text-end"
+    >
+      <h2 class="text-xl underline decoration-violet-400">Socials</h2>
+      <ul class="grid h-full items-center md:text-sm text-xs font-mono">
+        <li>
+          <a href="https://github.com/JedBorseth" target="_blank"></a> Github
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jedsen-borseth-289a64234"
+            target="_blank">LinkedIn</a
+          >
+        </li>
+        <li>
+          <button id="copy">Email</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <p class="w-full text-center font-mono text-xs mt-10">
+    Copyright 2022 Jed Borseth &copy; All Rights Reserved
+  </p>
+</footer>
+<script>
+  const copyDOMRef = document.getElementById("copy");
+  if (copyDOMRef) {
+    let count = 0;
+    copyDOMRef.addEventListener("click", () => {
+      navigator.clipboard.writeText("jedborseth@gmail.com");
+      copyDOMRef.innerText = "Copied";
+      count++;
+      if (count === 20) easterEgg();
+    });
+  }
+  // I was bored so i made this for fun
+  //   click the email a few times to see it!
+  const easterEgg = () => {
+    const random = () => {
+      return Math.floor(Math.random() * 255);
+    };
+    document.body.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`;
+    setTimeout(() => {
+      easterEgg();
+    }, 600);
+    console.log("rainbows!");
+  };
+</script>

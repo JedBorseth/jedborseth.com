@@ -4,9 +4,9 @@ const props = Astro.props.project;
 
 <article
   id={`project-${props.id}`}
-  class="text-white grid mt-5 w-full px-5 grid-rows-6 scroll-m-24"
+  class="text-white grid mt-5 w-full px-5 grid-rows-2 scroll-m-24 mb-10"
 >
-  <div class="col-span-2 grid">
+  <div class="col-span-2 grid js-show-on-scroll">
     <div class="justify-self-center sm:justify-self-end md:w-1/2 mb-10">
       <h2 class="border w-72 text-center h-min rounded text-3xl m-auto mb-3">
         {props.name}
@@ -21,7 +21,7 @@ const props = Astro.props.project;
       </h3>
     </div>
     <div
-      class="flex lg:gap-x-[25%] gap-x-5 flex-wrap md:flex-nowrap row-span-2 md:row-span-1 px-[5%] justify-center"
+      class="flex lg:gap-x-[25%] gap-x-5 flex-wrap md:flex-nowrap row-span-2 md:row-span-1 px-[5%] justify-center js-show-on-scroll"
     >
       <img
         src={props.image}
@@ -33,7 +33,7 @@ const props = Astro.props.project;
       <p class="py-5">{props.introText}</p>
     </div>
   </div>
-  <div class="mt-10 grid">
+  <div class="mt-10 grid col-span-2 js-show-on-scroll">
     <h2
       class="text-3xl border rounded w-72 text-center justify-self-center h-max"
     >
@@ -46,7 +46,6 @@ const props = Astro.props.project;
         autoplay
         muted
         loop
-        preload="none"
         class="rounded-md h-52"></video>
     </div>
   </div>

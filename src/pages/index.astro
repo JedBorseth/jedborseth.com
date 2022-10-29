@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import ToTop from "../components/ToTop";
 import Homeproject from "../components/Homeproject.astro";
+import Footer from "../components/Footer.astro";
 import * as data from "../data/projectdata.json";
 ---
 
@@ -14,7 +15,7 @@ import * as data from "../data/projectdata.json";
     <title>Jed Borseth - Portfolio</title>
   </head>
 
-  <body class="bg-neutral-900">
+  <body class="bg-neutral-900 transition-colors delay-500">
     <Navbar client:load />
     <main>
       <section id="hero" class="min-h-screen grid grid-rows-2 justify-center">
@@ -44,12 +45,18 @@ import * as data from "../data/projectdata.json";
       <ToTop client:idle />
       <section id="navigation" class="js-show-on-scroll">
         <div
-          class="w-full h-12 flex justify-evenly text-white underline decoration-violet-500 underline-offset-8 items-center mb-10"
+          class="w-full h-12 flex justify-evenly text-white underline underline-offset-8 items-center mb-10"
         >
-          <a href="#project-1" class="hover:decoration-violet-300"
+          <a
+            href="#project-1"
+            class="hover:decoration-violet-300 decoration-violet-500"
             >Movie Database</a
           >
-          <a href="#project-2" class="hover:decoration-violet-300">Project 2</a>
+          <a
+            href="#project-2"
+            class="hover:decoration-violet-300 decoration-violet-500"
+            >Project 2</a
+          >
         </div>
         <div class="flex">
           <hr
@@ -69,7 +76,7 @@ import * as data from "../data/projectdata.json";
         <Homeproject project={data.project1} />
       </section>
     </main>
-    <footer></footer>
+    <Footer />
     <script>
       // Codepen for animate opacity on scroll - https://codepen.io/jamesdoc/pen/qBbeOym
       const callback = function (entries: any[]) {
