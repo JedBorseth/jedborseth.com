@@ -18,12 +18,12 @@ const Navbar = () => {
         <nav className="sticky top-0 border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="pl-[5%]">
-              <a href="" className="hover:text-gray-600">
+              <a href="./" className="hover:text-gray-600">
                 <p>MAKE LOGO HERE</p>
               </a>
             </li>
             <li
-              className="mr-10 text-lg"
+              className="mr-10 text-lg hover:cursor-pointer"
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
@@ -40,11 +40,11 @@ const Navbar = () => {
             </li>
             {menuOpen && (
               <div className="absolute top-12 right-0 flex w-screen animate-[opacity_250ms_ease-in-out] flex-col gap-5 border-t-2 border-violet-600 bg-black py-5 text-center">
-                <a href="" className="hover:text-gray-600">
-                  <li>Projects</li>
+                <a href="./projects" className="hover:text-gray-600">
+                  Projects
                 </a>
-                <a href="" className="hover:text-gray-600">
-                  <li>About</li>
+                <a href="./about" className="hover:text-gray-600">
+                  About
                 </a>
               </div>
             )}
@@ -54,7 +54,7 @@ const Navbar = () => {
         <nav className="border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="md:pl-[5%]">
-              <a href="" className="hover:text-gray-600">
+              <a href="./" className="hover:text-gray-600">
                 <p>MAKE LOGO HERE</p>
               </a>
             </li>
@@ -69,12 +69,12 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="" className="hover:text-gray-600">
+                <a href="./projects" className="hover:text-gray-600">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="" className="hover:text-gray-600">
+                <a href="./about" className="hover:text-gray-600">
                   About
                 </a>
               </li>

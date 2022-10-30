@@ -1,0 +1,31 @@
+---
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jed Borseth - 404 Not Found</title>
+  </head>
+  <body class="bg-neutral-900">
+    <header><Navbar client:load /></header>
+    <main class="min-h-screen grid place-items-center text-white font-mono">
+      <div class="grid place-items-center gap-10">
+        <h1 class="text-6xl">404</h1>
+        <h2 class="text-center">Uh Oh, Something Bad Must Have Happened</h2>
+      </div>
+      <nav>
+        <a
+          href="./"
+          class="text-xl hover:text-gray-500 text-violet-400 underline underline-offset-8"
+          >Return Home?</a
+        >
+      </nav>
+    </main>
+    <Footer />
+  </body>
+</html>

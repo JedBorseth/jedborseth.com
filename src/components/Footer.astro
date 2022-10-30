@@ -1,7 +1,7 @@
 ---
 ---
 
-<footer class="text-white h-64 bg-neutral-800 py-5 bg-opacity-30">
+<footer class="text-white h-64 bg-black py-5 border-t-2">
   <nav
     aria-label="Footer Navigation"
     role="navigation"
@@ -10,17 +10,17 @@
     <div id="Pages" aria-label="Footer Page Navigation">
       <h2 class="text-xl underline decoration-violet-400">Pages</h2>
       <ul class="grid h-full items-center md:text-sm text-xs font-mono">
-        <li><a href="./"> Home</a></li>
-        <li><a href="./about">About</a></li>
-        <li><a href="./projects">Projects</a></li>
+        <li><a href="./" class="hover:text-gray-600"> Home</a></li>
+        <li><a href="./about" class="hover:text-gray-600">About</a></li>
+        <li><a href="./projects" class="hover:text-gray-600">Projects</a></li>
       </ul>
     </div>
     <div id="Projects" aria-label="Project Page Navigation" class="text-center">
       <h2 class="text-xl underline decoration-violet-400">Projects</h2>
       <ul class="grid h-full items-center md:text-sm text-xs font-mono">
-        <li>MovieDB</li>
-        <li>3D Gallery</li>
-        <li>Spotify Clone</li>
+        <li><a href="" class="hover:text-gray-600"> MovieDB</a></li>
+        <li><a href="" class="hover:text-gray-600"> 3D Gallery</a></li>
+        <li><a href="" class="hover:text-gray-600"> Spotify Clone</a></li>
       </ul>
     </div>
     <div
@@ -31,16 +31,21 @@
       <h2 class="text-xl underline decoration-violet-400">Socials</h2>
       <ul class="grid h-full items-center md:text-sm text-xs font-mono">
         <li>
-          <a href="https://github.com/JedBorseth" target="_blank"></a> Github
+          <a
+            href="https://github.com/JedBorseth"
+            target="_blank"
+            class="hover:text-gray-600">Github</a
+          >
         </li>
         <li>
           <a
             href="https://www.linkedin.com/in/jedsen-borseth-289a64234"
-            target="_blank">LinkedIn</a
+            target="_blank"
+            class="hover:text-gray-600">LinkedIn</a
           >
         </li>
         <li>
-          <button id="copy">Email</button>
+          <button id="copy" class="hover:text-gray-600">Email</button>
         </li>
       </ul>
     </div>
@@ -54,10 +59,13 @@
   if (copyDOMRef) {
     let count = 0;
     copyDOMRef.addEventListener("click", () => {
-      navigator.clipboard.writeText("jedborseth@gmail.com");
-      copyDOMRef.innerText = "Copied";
+      if (count === 20) {
+        easterEgg();
+      } else {
+        navigator.clipboard.writeText("jedborseth@gmail.com");
+        copyDOMRef.innerText = "Copied";
+      }
       count++;
-      if (count === 20) easterEgg();
     });
   }
   // I was bored so i made this for fun

@@ -16,7 +16,9 @@ import * as data from "../data/projectdata.json";
   </head>
 
   <body class="bg-neutral-900 transition-colors delay-500">
-    <Navbar client:load />
+    <header>
+      <Navbar client:load />
+    </header>
     <main>
       <section id="hero" class="min-h-screen grid grid-rows-2 justify-center">
         <div
@@ -63,7 +65,7 @@ import * as data from "../data/projectdata.json";
             class="w-[40%] m-auto bg-white border-none h-[2px] rounded mb-20"
           />
           <a
-            href=""
+            href="./projects"
             class="text-white underline decoration-violet-500 underline-offset-8 -mt-3 w-max hover:decoration-violet-300"
             >View All</a
           >
@@ -74,6 +76,8 @@ import * as data from "../data/projectdata.json";
       </section>
       <section class="" id="projects">
         <Homeproject project={data.project1} />
+        <hr class="w-11/12 m-auto bg-white border-none h-[2px] rounded my-20" />
+        <Homeproject project={data.project2} />
       </section>
     </main>
     <Footer />

@@ -13,9 +13,16 @@ const props = Astro.props.project;
       </h2><h3
         class="w-auto text-center h-min rounded text-xs font-mono italic"
       >
-        <span class="not-italic text-violet-300"
-          ><a href={props.location.ref} target="_blank">{props.location.name}</a
-          >
+        <span class="not-italic text-violet-300">
+          {
+            props.location.ref ? (
+              <a href={props.location.ref} target="_blank">
+                {props.location.name}
+              </a>
+            ) : (
+              <a href="#">{props.location.name}</a>
+            )
+          }
         </span> |
         {props.techTitles}
       </h3>
@@ -48,5 +55,12 @@ const props = Astro.props.project;
         loop
         class="rounded-md h-52"></video>
     </div>
+  </div>
+  <div class="w-full col-span-2 text-center">
+    <a
+      href={props.github}
+      class="hover:text-gray-600 p-2 text-violet-400"
+      target="_blank">View Github</a
+    >
   </div>
 </article>

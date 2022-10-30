@@ -9,6 +9,7 @@
     "techTitles": "NextJS, SCSS, Supabase, NextAuth",
     "introText": "This project was done in groups of 4 in the BCIT Front-End Developer program with the goal being to create a movie database that could save a users favorites and display movies from the TMDB API. My group chose to use NextJS and include a database hosted on Supabase to store our favorites instead of using local browser storage. I chose to use a database because then you would be able to sync favorites across multiple devices and not just save them locally.",
     "image": "../projects/moviedb/home.png",
+    "github": "https://github.com/JedBorseth/movie-database",
     "learned": {
       "0": {
         "title": "Coding in a team",
@@ -17,5 +18,23 @@
       }
     }
   },
-  "project2": {}
+  "project2": {
+    "id": 2,
+    "name": "3D Gallery",
+    "location": {
+      "name": "Personal Project",
+      "ref": ""
+    },
+    "techTitles": "Three.JS, Vite, Typescript",
+    "introText": "lorem ipsum",
+    "image": "../projects/threejs-portfolio/home.png",
+    "github": "https://github.com/JedBorseth/threejs-gallery",
+    "learned": {
+      "0": {
+        "title": "Coding in a team",
+        "video": "../projects/threejs-portfolio/screen-record.mkv",
+        "content": "This project helped me learn to code in a group using industry standard workflows eg. Scrum and Waterfall methodologies using Trello or Jira. Using these strategies it helped me learn how to program effectively in a group environment to create a superior product than what was asked of me."
+      }
+    }
+  }
 }
