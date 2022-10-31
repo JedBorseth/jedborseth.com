@@ -109,6 +109,8 @@ import * as data from "../data/projectdata.json";
         btn.addEventListener("click", () => {
           if (btn.firstElementChild) {
             btn.firstElementChild.style.bottom = "100vh";
+            btn.style.opacity = "1";
+            btn.firstElementChild.style.opacity = "1";
             setTimeout(() => {
               window.location.href = "https://gallery.jedborseth.com";
             }, 1500);
