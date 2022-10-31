@@ -6,6 +6,12 @@ import Footer from "../components/Footer.astro";
 import * as data from "../data/projectdata.json";
 ---
 
+<!-- 
+Only used react for navbar, scroll to top button, 
+  
+Make sure there is as little javascript to client as possible  
+  
+-->
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -13,6 +19,7 @@ import * as data from "../data/projectdata.json";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Jed Borseth - Portfolio</title>
+
   </head>
 
   <body class="bg-neutral-900 transition-colors delay-500">
@@ -117,7 +124,7 @@ import * as data from "../data/projectdata.json";
             }
 
             setTimeout(() => {
-              // window.location.href = "https://gallery.jedborseth.com";
+              window.location.href = "https://gallery.jedborseth.com";
             }, 1500);
           }
         });

@@ -26,14 +26,14 @@
       "ref": ""
     },
     "techTitles": "Three.JS, Vite, Typescript",
-    "introText": "lorem ipsum",
+    "introText": "This project was for myself to get better at using different javascript libraries, one thing about myself is that I love to find new and exciting things and try to build something with them. My choice to use threeJS was because I found that a lot of really popular websites use it and wanted to experience it for myself, Ex. ",
     "image": "../projects/threejs-portfolio/home.png",
     "github": "https://github.com/JedBorseth/threejs-gallery",
     "learned": {
       "0": {
-        "title": "Coding in a team",
+        "title": "Learning New Things",
         "video": "../projects/threejs-portfolio/screen-record.mkv",
-        "content": "This project helped me learn to code in a group using industry standard workflows eg. Scrum and Waterfall methodologies using Trello or Jira. Using these strategies it helped me learn how to program effectively in a group environment to create a superior product than what was asked of me."
+        "content": "Working in a 3D environment and dealing with lighting or other things like font text geometry was very different from what I am used to with web development but stepping outside of my comfort zone and learning new things is something I really enjoy to do. Overall I think that this project has given me a lot more respect for game developers and 3D model designers and I learned a lot about programming inside of a 3D scene."
       }
     }
   }

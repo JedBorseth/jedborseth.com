@@ -37,7 +37,29 @@ const props = Astro.props.project;
         loading="lazy"
       />
 
-      <p class="py-5">{props.introText}</p>
+      <p class="py-5">
+        {props.introText}{
+          props.id === 2 && (
+            <>
+              <a
+                href="https://www.lamborghini.com/en-en/3d"
+                target="_blank"
+                class="ml-2 text-violet-300"
+              >
+                Lamborghini
+              </a>
+              ,
+              <a
+                href="https://eyes.nasa.gov/apps/solar-system/#/home"
+                class="ml-2 text-violet-300"
+                target="_blank"
+              >
+                NASA
+              </a>
+            </>
+          )
+        }
+      </p>
     </div>
   </div>
   <div class="mt-10 grid col-span-2 js-show-on-scroll">
