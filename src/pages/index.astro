@@ -24,11 +24,8 @@ import * as data from "../data/projectdata.json";
         <div
           class="text-5xl sm:text-8xl md:text-9xl xl:text-[12rem] font-medium pl-[5%] w-full flex flex-wrap transition-all md:pt-20 self-center"
         >
-          <h2 class="w-full text-violet-400">Hi, I'm</h2><h1
-            class="w-full text-white"
-          >
-            Jed Borseth
-          </h1>
+          <h2 class="w-full text-violet-400">Hi, I'm</h2>
+          <h1 class="w-full text-white">Jed Borseth</h1>
           <span
             class="text-xs md:text-sm w-full md:pl-5 pt-5 text-violet-400 transition-all font-mono"
           >
@@ -37,10 +34,14 @@ import * as data from "../data/projectdata.json";
           </span>
         </div>
         <button
-          class="rounded-2xl px-10 py-5 bg-violet-500 w-48 text-white hover:scale-105 transition-all max-h-20 justify-self-center md:self-center"
-          >View Gallery <span class="text-xs italic text-gray-200"
-            >"Built Using Threejs"</span
-          >
+          id="takeOffBtn"
+          class="rounded-2xl px-10 py-5 bg-violet-500 w-48 text-white transition-all max-h-20 justify-self-center md:self-center group hover:bg-neutral-900 relative"
+          >View 3D Gallery
+          <img
+            src="./images/rocket.png"
+            alt="Rocket Ship"
+            class="-rotate-45 w-20 h-20 absolute left-0 right-0 m-auto group-hover:opacity-100 group-active:opacity-100 opacity-0 transition-all bottom-16 hover:animate-[wiggle_500ms_ease-in-out_infinite] duration-700 delay-500"
+          />
         </button>
       </section>
       <hr class="w-11/12 m-auto bg-white border-none h-[2px] rounded" />
@@ -100,6 +101,20 @@ import * as data from "../data/projectdata.json";
         target.classList.add("opacity-1");
         observer.observe(target);
       });
+
+      // Rocket Lanuch to Gallery
+
+      const btn = document.getElementById("takeOffBtn");
+      if (btn) {
+        btn.addEventListener("click", () => {
+          if (btn.firstElementChild) {
+            btn.firstElementChild.style.bottom = "100vh";
+            setTimeout(() => {
+              window.location.href = "https://gallery.jedborseth.com";
+            }, 1000);
+          }
+        });
+      }
     </script>
   </body>
 </html>

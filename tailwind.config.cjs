@@ -7,6 +7,10 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-47deg)" },
+          "50%": { transform: "rotate(-42deg)" },
+        },
       },
     },
   },

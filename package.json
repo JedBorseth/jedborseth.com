@@ -16,7 +16,8 @@
     "@astrojs/vercel": "^2.3.2",
     "@types/canvas-confetti": "^1.4.3",
     "astro": "^1.5.2",
-    "canvas-confetti": "^1.5.1"
+    "canvas-confetti": "^1.5.1",
+    "framer-motion": "^7.6.2"
   },
   "devDependencies": {
     "@astrojs/react": "^1.2.1",
