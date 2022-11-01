@@ -34,6 +34,7 @@
       "0": {
         "title": "Learning New Things",
         "video": "../projects/threejs-portfolio/screen-record.webm",
+        "videoApple": "../projects/threejs-portfolio/screen-record.mp4",
         "content": "It was so cool to step outside of my comfort zone and incorporate lighting and shape geometry into my web development skill set.  I have a new level of appreciation for game developers and 3D model designers. I enjoyed learning something new through this project and it has prepared me to program inside of a 3D scene."
       }
     }

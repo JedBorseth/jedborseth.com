@@ -7,15 +7,17 @@ import * as data from "../data/projectdata.json";
 ---
 
 <!-- 
-Only used react for navbar, scroll to top button, 
-  
-Make sure there is as little javascript to client as possible  
-  
--->
+  If your reading this then you are a really cool person!
+  Want to get in touch? email me @ jedborseth@gmail.com
+ -->
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Jed Borseth Front End Web Developer Portfolio"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Jed Borseth - Portfolio</title>
@@ -41,12 +43,12 @@ Make sure there is as little javascript to client as possible
         </div>
         <button
           id="takeOffBtn"
-          class="rounded-2xl px-10 py-5 bg-violet-500 w-48 text-white transition-all max-h-20 justify-self-center md:self-center group hover:bg-neutral-900 relative"
+          class="rounded-2xl px-10 py-5 bg-violet-700 w-48 text-white transition-all max-h-20 justify-self-center md:self-center group hover:bg-neutral-900 relative"
           >View 3D Gallery
           <img
             src="./images/rocket.png"
             alt="Rocket Ship"
-            class="-rotate-45 w-20 h-20 absolute left-0 right-0 m-auto group-hover:opacity-100 group-active:opacity-100 opacity-0 transition-all bottom-16 hover:animate-[wiggle_500ms_ease-in-out_infinite] active:animate-[wiggle_500ms_ease-in-out_infinite] duration-700 md:delay-200"
+            class="-rotate-45 w-20 absolute left-0 right-0 m-auto group-hover:opacity-100 group-active:opacity-100 opacity-0 transition-all bottom-16 hover:animate-[wiggle_500ms_ease-in-out_infinite] active:animate-[wiggle_500ms_ease-in-out_infinite] duration-700 md:delay-200"
           />
         </button>
       </section>
@@ -123,6 +125,7 @@ Make sure there is as little javascript to client as possible
             }
 
             setTimeout(() => {
+              alert("Gallery is not functional on IOS or Andriod");
               window.location.href = "https://gallery.jedborseth.com";
             }, 1500);
           }
