@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className="sticky top-0 border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="pl-[5%]">
-              <a href="./" className="hover:text-gray-600">
+              <a href="../" className="hover:text-gray-600">
                 <p>MAKE LOGO HERE</p>
               </a>
             </li>
@@ -54,7 +54,7 @@ const Navbar = () => {
         <nav className="border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="md:pl-[5%]">
-              <a href="./" className="hover:text-gray-600">
+              <a href="../" className="hover:text-gray-600">
                 <p>MAKE LOGO HERE</p>
               </a>
             </li>
