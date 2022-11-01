@@ -13,7 +13,7 @@ const ToTop = () => {
   return (
     <>
       <div
-        className="sticky right-8 -bottom-24 top-[90%] z-50 float-right m-auto rounded bg-violet-400 shadow-violet-300 transition-all hover:cursor-pointer hover:bg-violet-300 hover:shadow-md"
+        className="sticky right-8 -bottom-24 top-[90%] z-50 float-right m-auto rounded bg-violet-400 shadow-violet-300 transition-all hover:cursor-pointer hover:bg-violet-300 hover:shadow-md lg:p-5"
         onClick={() => {
           const animateScroll = () => {
             if (scrolling) {
