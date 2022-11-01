@@ -71,11 +71,13 @@ const props = Astro.props.project;
     <div class="grid md:grid-cols-2 w-full gap-[10%] place-items-center">
       <p class="md:-mr-10">{props.learned[0].content}</p>
       <video
-        src={props.learned[0].video}
         autoplay
         muted
         loop
-        class="rounded-md h-52"></video>
+        playsinline="video/webm"
+        class="rounded-md h-52"
+        ><source src={props.learned[0].video} type="video/webm" />
+      </video>
     </div>
   </div>
   <div class="w-full col-span-2 text-center">
