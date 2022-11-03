@@ -82,6 +82,7 @@ const Navbar = () => {
           </ul>
         </nav>
       )}
+      {/* GLOBAL STYLES */}
     </>
   );
 };

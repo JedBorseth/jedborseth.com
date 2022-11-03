@@ -21,6 +21,11 @@ import * as data from "../data/projectdata.json";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Jed Borseth - Portfolio</title>
+    <style>
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+    </style>
   </head>
 
   <body class="bg-neutral-900 transition-colors delay-500">
@@ -125,7 +130,7 @@ import * as data from "../data/projectdata.json";
             }
 
             setTimeout(() => {
-              alert("Gallery is not functional on IOS or Andriod");
+              alert("Gallery is not avaliable on IOS or Andriod");
               window.location.href = "https://gallery.jedborseth.com";
             }, 1500);
           }

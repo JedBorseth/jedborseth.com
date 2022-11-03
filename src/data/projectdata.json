@@ -2,6 +2,7 @@
   "project1": {
     "id": 1,
     "name": "Nomi Movies",
+    "live": "https://moviedb.jedborseth.com",
     "location": {
       "name": "BCIT",
       "ref": "https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
@@ -22,6 +23,7 @@
   "project2": {
     "id": 2,
     "name": "3D Gallery",
+    "live": "https://gallery.jedborseth.com",
     "location": {
       "name": "Personal Project",
       "ref": ""
@@ -38,5 +40,24 @@
         "content": "It was so cool to step outside of my comfort zone and incorporate lighting and shape geometry into my web development skill set.  I have a new level of appreciation for game developers and 3D model designers. I enjoyed learning something new through this project and it has prepared me to program inside of a 3D scene."
       }
     }
+  },
+  "project3": {
+    "id": 3,
+    "name": "Movie Search",
+    "image": "../projects/movie-search/home.png",
+    "live": "https://search.jedborseth.com"
+  },
+  "project4": {
+    "id": 4,
+    "name": "jQuery Guessing Game",
+    "image": "../projects/guessing-game/home.png",
+    "image2": "../projects/guessing-game/game.png",
+    "live": "https://game.jedborseth.com"
+  },
+  "project5": {
+    "id": 5,
+    "name": "FileZipp'r",
+    "image": "../projects/file-zip/home.png",
+    "live": "https://jed.borsethdevelopers.monster/php/file-z"
   }
 }
