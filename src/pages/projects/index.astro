@@ -3,10 +3,6 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer.astro";
 import { motion } from "framer-motion";
 import * as data from "../../data/projectdata.json";
-
-
-
-const liveIcon = "../src/broadcast-pin.svg"
 ---
 
 <!DOCTYPE html>
@@ -25,12 +21,12 @@ const liveIcon = "../src/broadcast-pin.svg"
         client:load
         initial={{ y: -500, opacity: 0 }}
       >
-        <div class="flex items-center h-full justify-center">
+        <div class="flex items-center h-full justify-center group">
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project1.live}
-              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
-              ><img src={liveIcon} alt="Live Icon" />
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+              >&#91;Live Site&#93;
             </a>
             <a href={`./projects/${data.project1.slug}`}>
               <img src={data.project1.image} alt="Project Img" width="350px" />
@@ -39,8 +35,8 @@ const liveIcon = "../src/broadcast-pin.svg"
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project2.live}
-              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
-              ><img src={liveIcon} alt="Live Icon" />
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+              >&#91;Live Site&#93;
             </a>
             <a href={`./projects/${data.project2.slug}`}>
               <img src={data.project2.image} alt="Project Img" width="350px" />
@@ -49,8 +45,8 @@ const liveIcon = "../src/broadcast-pin.svg"
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project3.live}
-              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
-              ><img src={liveIcon} alt="Live Icon" />
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+              >&#91;Live Site&#93;
             </a>
             <a href="">
               <img src={data.project3.image} alt="Project Img" width="350px" />
@@ -59,8 +55,8 @@ const liveIcon = "../src/broadcast-pin.svg"
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project4.live}
-              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
-              ><img src={liveIcon} alt="Live Icon" />
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+              >&#91;Live Site&#93;
             </a>
             <a href="">
               <img src={data.project4.image} alt="Project Img" width="350px" />
@@ -69,10 +65,10 @@ const liveIcon = "../src/broadcast-pin.svg"
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project5.live}
-              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
-              ><img src={liveIcon} alt="Live Icon" />
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+              > &#91;Live Site&#93;
             </a>
-            <a href="">
+            <a href="" class="">
               <img src={data.project5.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
