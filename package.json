@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/mdx": "^0.11.4",
     "@astrojs/tailwind": "^2.1.1",
-    "@astrojs/vercel": "^2.3.2",
+    "@astrojs/vercel": "^2.3.3",
     "@types/canvas-confetti": "^1.4.3",
     "astro": "^1.5.2",
     "canvas-confetti": "^1.5.1",
