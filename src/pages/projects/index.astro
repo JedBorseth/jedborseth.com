@@ -23,7 +23,9 @@ import * as data from "../../data/projectdata.json";
       >
         <div class="flex items-center h-full justify-center">
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
-            ><a href={data.project1.live} class="relative"
+            ><a
+              href={data.project1.live}
+              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -35,12 +37,14 @@ import * as data from "../../data/projectdata.json";
                 ></path>
               </svg>
             </a>
-            <a href="">
+            <a href={`./projects/${data.project1.slug}`}>
               <img src={data.project1.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
-            ><a href={data.project2.live} class="relative"
+            ><a
+              href={data.project2.live}
+              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -52,12 +56,14 @@ import * as data from "../../data/projectdata.json";
                 ></path>
               </svg>
             </a>
-            <a href="">
+            <a href={`./projects/${data.project2.slug}`}>
               <img src={data.project2.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
-            ><a href={data.project3.live} class="relative"
+            ><a
+              href={data.project3.live}
+              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -74,7 +80,9 @@ import * as data from "../../data/projectdata.json";
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
-            ><a href={data.project4.live} class="relative"
+            ><a
+              href={data.project4.live}
+              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -93,7 +101,7 @@ import * as data from "../../data/projectdata.json";
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project5.live}
-              class="relative hover:fll-gray-300 fill-violet-600"
+              class="relative fill-violet-600 hover:fill-gray-500 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

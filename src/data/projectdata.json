@@ -2,6 +2,7 @@
   "project1": {
     "id": 1,
     "name": "Nomi Movies",
+    "slug": "movie-db",
     "live": "https://moviedb.jedborseth.com",
     "location": {
       "name": "BCIT",
@@ -23,6 +24,7 @@
   "project2": {
     "id": 2,
     "name": "3D Gallery",
+    "slug": "threejs",
     "live": "https://gallery.jedborseth.com",
     "location": {
       "name": "Personal Project",

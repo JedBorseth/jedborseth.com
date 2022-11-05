@@ -40,10 +40,10 @@ const Navbar = () => {
             </li>
             {menuOpen && (
               <div className="absolute top-12 right-0 flex w-screen animate-[opacity_250ms_ease-in-out] flex-col gap-5 border-t-2 border-violet-600 bg-black py-5 text-center">
-                <a href="./projects" className="hover:text-gray-600">
+                <a href="../projects" className="hover:text-gray-600">
                   Projects
                 </a>
-                <a href="./about" className="hover:text-gray-600">
+                <a href="../about" className="hover:text-gray-600">
                   About
                 </a>
               </div>
@@ -69,12 +69,12 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="./projects" className="hover:text-gray-600">
+                <a href="../projects" className="hover:text-gray-600">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="./about" className="hover:text-gray-600">
+                <a href="../about" className="hover:text-gray-600">
                   About
                 </a>
               </li>
@@ -82,7 +82,6 @@ const Navbar = () => {
           </ul>
         </nav>
       )}
-      {/* GLOBAL STYLES */}
     </>
   );
 };
