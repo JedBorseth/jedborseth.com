@@ -2,13 +2,11 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel/edge";
-
-// https://astro.build/config
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx(), tailwind()],
-  output: "server",
+  output: "static",
   adapter: vercel(),
 });
