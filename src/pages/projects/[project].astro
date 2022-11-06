@@ -1,0 +1,171 @@
+---
+import { Debug } from "astro/components";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer.astro";
+import * as data from "../../data/projectdata.json";
+export function getStaticPaths() {
+  return [
+    { params: { project: "movie-db" } },
+    { params: { project: "threejs" } },
+    { params: { project: "game" } },
+    { params: { project: "search" } },
+    { params: { project: "file-zip" } },
+  ];
+}
+const pages = ["movie-db", "threejs", "search", "game", "file-zip"];
+const page = Astro.params.project;
+let pageData;
+
+if (page === data.project1.slug) {
+  pageData = data.project1;
+}
+if (page === data.project2.slug) {
+  pageData = data.project2;
+}
+if (page === data.project3.slug) {
+  pageData = data.project3;
+}
+if (page === data.project4.slug) {
+  pageData = data.project4;
+}
+if (page === data.project5.slug) {
+  pageData = data.project5;
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jed Borseth - {pageData && pageData.name}</title>
+  </head>
+  <body class="bg-neutral-900">
+    <header><Navbar client:load /></header>
+    <main class="min-h-screen text-white font-mono pt-10">
+      <div class="grid">
+        <h1 class="text-center lg:text-end text-3xl lg:w-2/3 lg:pr-[20%]">
+          {pageData && pageData.name}
+          <span> |</span>
+          <a
+            href={pageData && pageData.location.ref}
+            class="hover:text-gray-300 w-fit"
+            >{pageData && pageData.location.name}</a
+          >
+        </h1>
+        <h2
+          class="italic text-violet-300 lg:text-end text-center lg:w-1/3 text-sm"
+        >
+          {pageData && pageData?.techTitles}
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 grid-rows-2 mb-20 mt-10">
+        <a
+          href={pageData && pageData.live}
+          class="col-span-2 md:col-span-1 row-span-1 md:row-span-2"
+        >
+          <img
+            src={pageData && pageData.image}
+            alt="Project Home Page Screenshot"
+            class="h-52 w-full object-contain"
+            loading="lazy"
+          />
+        </a>
+
+        <p class="px-5 col-span-2 md:col-span-1 row-span-1 md:row-span-2">
+          {pageData && pageData.introText}{
+            pageData && pageData.id === 2 && (
+              <>
+                <a
+                  href="https://www.lamborghini.com/en-en/3d"
+                  target="_blank"
+                  class="ml-2 text-violet-300"
+                >
+                  Lamborghini
+                </a>
+                ,
+                <a
+                  href="https://eyes.nasa.gov/apps/solar-system/#/home"
+                  class="ml-2 text-violet-300"
+                  target="_blank"
+                >
+                  NASA
+                </a>
+              </>
+            )
+          }
+        </p>
+      </div>
+      {
+        pageData && pageData.id === 1 && (
+          <div class="mt-10 grid h-full w-full grid-cols-2 grid-rows-2 place-items-center md:place-items-end">
+            <div class="col-span-2 row-span-2 self-center justify-self-center rounded-lg bg-black p-2 shadow-lg md:col-span-1">
+              <h2 class="text-center text-xl">Custom Hooks</h2>
+              <code class="sm:text-md w-full bg-black text-sm">
+                <span class="text-orange-300">function</span>
+                <span class="text-green-200">useSupabase</span>
+                <span class="text-red-300">()</span> &#123; <br />
+                <div class="ml-5">
+                  <span class="text-violet-300">const</span> supabaseUrl =
+                  <span class="text-blue-200">
+                    "https://********/.supabase.co"
+                  </span>
+                  ; <br />
+                  <span class="text-violet-300">const</span> supabaseAuth =
+                  <span class="text-blue-200">"*****************"</span>;
+                  <br />
+                  <span class="text-violet-300">const</span> supabase =
+                  <span class="text-cyan-300">createClient</span>
+                  <span class="text-red-300">( </span>supabaseUrl, supabaseKey
+                  <span class="text-red-300">)</span>;
+                  <br /> <span class="text-orange-300">return</span> supabase;
+                </div>
+                <span class="ml-2">&#125;</span>
+                <br /> <span class="text-orange-300">export default</span>
+                <span class="text-green-200">useSupabase</span>;
+                <br />
+              </code>
+            </div>
+            <div class="col-span-2 row-span-1 my-10 grid place-items-center md:col-span-1 lg:row-span-2">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline="video/webm"
+                class=" w-2/3 rounded-md"
+              >
+                <source
+                  src={pageData && pageData.learned[0].video}
+                  type="video/webm"
+                />
+                <source
+                  src={pageData && pageData.learned[0].videoApple}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        )
+      }
+      <div class="grid grid-cols-2 grid-rows-3">
+        <h2 class="col-span-2 text-center place-self-center text-2xl py-5">
+          {pageData && pageData.learned[0].title}
+        </h2>
+        <div class="col-span-2 md:col-span-1 row-span-1 md:row-span-2 p-5">
+          {pageData && pageData.learned[0].content}
+        </div>
+        <div
+          class="col-span-2 md:col-span-1 row-span-1 md:row-span-2 grid place-items-center h-1/2"
+        >
+          <img
+            src={pageData && pageData.learned[0].image}
+            alt="Screenshot of what i learned from project"
+            class="md:w-2/3 w-full"
+          />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

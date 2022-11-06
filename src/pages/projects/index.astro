@@ -15,13 +15,15 @@ import * as data from "../../data/projectdata.json";
   </head>
   <body class="bg-neutral-900">
     <header><Navbar client:load /></header>
-    <main class="min-h-screen text-white font-mono">
+    <main class="text-white font-mono min-h-screen">
       <motion.div
         animate={{ y: 100, opacity: 1 }}
         client:load
         initial={{ y: -500, opacity: 0 }}
       >
-        <div class="flex items-center h-full justify-center group">
+        <div
+          class="flex items-center justify-center group flex-wrap lg:flex-nowrap gap-10 md:gap-0 mb-48 md:mb-0"
+        >
           <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
             ><a
               href={data.project1.live}
@@ -48,7 +50,7 @@ import * as data from "../../data/projectdata.json";
               class="relative text-gray-500 transition-colors group-hover:text-violet-400"
               >&#91;Live Site&#93;
             </a>
-            <a href="">
+            <a href={`./projects/${data.project3.slug}`}>
               <img src={data.project3.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
@@ -58,7 +60,7 @@ import * as data from "../../data/projectdata.json";
               class="relative text-gray-500 transition-colors group-hover:text-violet-400"
               >&#91;Live Site&#93;
             </a>
-            <a href="">
+            <a href={`./projects/${data.project4.slug}`}>
               <img src={data.project4.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
@@ -66,9 +68,10 @@ import * as data from "../../data/projectdata.json";
             ><a
               href={data.project5.live}
               class="relative text-gray-500 transition-colors group-hover:text-violet-400"
-              > &#91;Live Site&#93;
+            >
+              &#91;Live Site&#93;
             </a>
-            <a href="" class="">
+            <a href={`./projects/${data.project5.slug}`} class="">
               <img src={data.project5.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>

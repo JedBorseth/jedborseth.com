@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Logo from "/images/site-logo.svg";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="pl-[5%]">
               <a href="../" className="hover:text-gray-600">
-                <p>MAKE LOGO HERE</p>
+                <img src={Logo} alt="LOGO" />
               </a>
             </li>
             <li
@@ -54,8 +55,8 @@ const Navbar = () => {
         <nav className="border-b-2 font-mono text-white">
           <ul className="flex h-12 w-full items-center justify-between bg-black">
             <li className="md:pl-[5%]">
-              <a href="../" className="hover:text-gray-600">
-                <p>MAKE LOGO HERE</p>
+              <a href="../" className="">
+                <img src={Logo} alt="LOGO" className="" />
               </a>
             </li>
             <div className="flex gap-10 md:pr-10">

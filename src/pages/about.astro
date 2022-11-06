@@ -1,21 +1,233 @@
 ---
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.astro";
+import { Debug } from "astro/components";
+import LinkedIn from "/images/linkedin.svg";
+import Email from "/images/envelope.svg";
+import Github from "/images/github.svg";
+import Phone from "/images/phone-fill.svg";
+import Twitter from "/images/twitter.svg";
+const time = new Date();
+const age = time.getFullYear() - 2003;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Jed Borseth Front End Web Developer Portfolio"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content=" " />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
     <title>Jed Borseth - About</title>
   </head>
   <body class="bg-neutral-900">
     <header><Navbar client:load /></header>
-    <main class="min-h-screen grid place-items-center text-white font-mono">
-      <h1>Hello, Im Jed Borseth: Front-End Web Developer</h1>
+    <main class="min-h-screen grid text-white md:grid-cols-[2fr,1fr]">
+      <div class="grid w-full h-max mt-10">
+        <h1
+          class="text-7xl underline decoration-violet-400 md:text-end text-center lg:mr-10"
+        >
+          Jed Borseth
+        </h1>
+
+        <div
+          id="socials"
+          class="flex justify-around md:w-1/3 md:justify-self-end mt-2"
+        >
+          <a
+            href="https://www.linkedin.com/in/jedsen-borseth-289a64234/"
+            class="hover:grayscale transition-all"
+            ><img src={LinkedIn} alt="LinkedIn Icon" />
+          </a>
+          <a
+            href="https://github.com/JedBorseth"
+            class="hover:grayscale transition-all"
+            ><img src={Github} alt="GitHub" />
+          </a>
+          <a
+            href="https://twitter.com/JedBorseth"
+            class="hover:grayscale transition-all"
+            ><img src={Twitter} alt="Phone Number" />
+          </a>
+          <a
+            href="tel:604-226-7964"
+            class="hover:grayscale transition-all relative"
+            id="phone"
+            ><img src={Phone} alt="Phone Number" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jedsen-borseth-289a64234/"
+            class="hover:grayscale transition-all"
+            ><img src={Email} alt="Email" />
+          </a>
+        </div>
+        <p class="p-5 mt-10 text-lg tracking-wider">
+          Hi, I'm Jed Borseth, a Front-end Web Developer. As a front end web
+          developer I am always learning new technologies. Some of my favorite
+          new technologies I've learned are NextJS, tRPC, and Astro. Other than
+          finding new technologies to play with, some things I like to do in my
+          free time are: building computers, buying, selling, and collecting
+          shoes, modding game consoles, and building custom keyboards. Overall I
+          am really into computers and have been since as long as I can
+          remember. In highschool I built my first website for the Menonite
+          Historical Society of British Columbia. Unfortunately the site is no
+          longer live and was replaced by <a
+            href="https://www.mhsbc.com"
+            class="text-red-200">this</a
+          >. Why they prefered this to mine, I have no idea. After building that
+          website I started to look into more advanced web development and took
+          the FWD course at BCIT and am eager to join the workforce and share my
+          knowledge of the subject with the world.
+        </p>
+      </div>
+      <aside
+        class="border w-11/12 font-mono relative rounded bg-neutral-800 bg-opacity-20 pr-5 pl-1 h-max self-center mx-1 justify-self-center mb-10"
+      >
+        <h2 class="w-full text-center">bio</h2>
+        <p data-text={`Age: ${age}`}>
+          <span class="text-red-300">const</span> currentAge: number = {age};
+        </p>
+        <p class="mt-8" data-text="High School: MEI">
+          <span class="text-red-300">const</span>
+          <span class="text-blue-500"
+            >[<span class="text-violet-300">school, setSchool</span>]</span
+          > = useState<span class="text-blue-500"
+            >(<span class="text-green-300">'MEI Highschool'</span>)</span
+          >;
+        </p>
+        <p data-text="University: BCIT">
+          setSchool(<span class="text-green-300">'BCIT'</span>);
+        </p>
+        <p class="my-8" data-text="Operating System: Ubuntu Linux">
+          $<span class="text-blue-500"
+            >(<span class="text-green-300">'#os'</span>)</span
+          >.value = <span class="text-green-300">'ubuntu'</span>;
+        </p>
+        <p data-text="Favorite Language: JS or TS">
+          <span class="text-violet-300">$favoriteLanguage</span> = Javascript &&
+          Typescript;
+        </p>
+        <p data-text="Favorite Album: Man On The Moon - Kid Cudi" class="my-8">
+          music.album.favorite === <span class="text-green-300"
+            >"Man On The Moon - Kid Cudi"
+          </span>;
+        </p>
+        <p data-text="Interests: Shoes, Coding, PC Building, Keyboard Building">
+          <span class="text-red-300">let</span> interests = <span
+            class="text-blue-500"
+            >[<span class="text-green-300"
+              >'shoes', 'coding', 'building computers'</span
+            >]</span
+          >
+          <br /> interests.push<span class="text-blue-500"
+            >(<span class="text-green-300">'building keyboards'</span>)</span
+          >;
+        </p>
+        <p class="my-8">
+          <span class="text-red-300">if</span><span class="text-blue-500"
+            >(<span class="text-violet-300">contact</span>)</span
+          >
+          <a href="mailto:jedborseth@gmail.com">click here;</a>
+        </p>
+        <button
+          class="text-xs italic absolute right-5 -bottom-10 text-violet-300 bg-neutral-800 p-2 rounded-lg hover:scale-105 transition-all"
+          id="revealText">I dont understand this</button
+        >
+      </aside>
     </main>
     <Footer />
+    <script defer>
+      const items = document.querySelectorAll("p");
+      const clickableItems = [];
+      document.getElementById("revealText").addEventListener("click", () => {
+        clickableItems.forEach((item) => {
+          item.innerText = item.dataset.text;
+        });
+      });
+      items.forEach((item, index) => {
+        if (
+          index !== 0 &&
+          index !== 1 &&
+          index !== items.length - 1 &&
+          index !== items.length - 2
+        ) {
+          clickableItems.push(item);
+          item.addEventListener("click", (e) => {
+            item.innerText = item.dataset.text;
+          });
+        }
+      });
+      console.log(items);
+      const phoneEl = document.getElementById("phone");
+      if (phoneEl) {
+        phoneEl.addEventListener("click", () => {
+          const el = document.createElement("div");
+          el.innerHTML = "604-226-7964";
+          el.classList = "absolute w-max z-50 -left-8 italic";
+          phoneEl.appendChild(el);
+        });
+      }
+    </script>
   </body>
 </html>

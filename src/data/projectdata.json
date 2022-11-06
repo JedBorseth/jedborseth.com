@@ -17,6 +17,7 @@
         "title": "Coding in a team",
         "video": "../projects/moviedb/screen-record.webm",
         "videoApple": "../projects/moviedb/screen-record.mp4",
+        "image": "../projects/moviedb/team.png",
         "content": "This project showcases my skills using industry standard workflows such as Scrum and Waterfall methodologies as well as using tools like Trello or Jira.  Further, through my work on this I was able to demonstrate both leading and working with a team to create a superior product beyond the outlined project scope and expectations."
       }
     }
@@ -28,7 +29,7 @@
     "live": "https://gallery.jedborseth.com",
     "location": {
       "name": "Personal Project",
-      "ref": ""
+      "ref": "../projects"
     },
     "techTitles": "Three.JS, Vite, Typescript",
     "introText": "You know how you go to a website and it is boring, band, and unoriginal. Part of the reason I love coding is because it gives me the opportunity to be creative and make well written, user friendly websites. I created this project to illustrate three.js just to be creative and try something different. Some sites that inspired me are: ",
@@ -37,6 +38,7 @@
     "learned": {
       "0": {
         "title": "Learning New Things",
+        "image": "",
         "video": "../projects/threejs-portfolio/screen-record.webm",
         "videoApple": "../projects/threejs-portfolio/screen-record.mp4",
         "content": "It was so cool to step outside of my comfort zone and incorporate lighting and shape geometry into my web development skill set.  I have a new level of appreciation for game developers and 3D model designers. I enjoyed learning something new through this project and it has prepared me to program inside of a 3D scene."
@@ -46,20 +48,67 @@
   "project3": {
     "id": 3,
     "name": "Movie Search",
+    "slug": "search",
     "image": "../projects/movie-search/home.png",
-    "live": "https://search.jedborseth.com"
+    "live": "https://search.jedborseth.com",
+    "techTitles": "TailwindCSS, React, Typescript",
+    "introText": "This quick project was for my personal media server to be able to easily find out if I had the movie on my server or if I had to use another streaming service. When searching it uses the TMDB API to find what streaming services are avaliable to watch a movie as well as search my server at the same time.",
+    "learned": {
+      "0": {
+        "title": "The Power of public APIs",
+        "image": "../projects/movie-search/search.png",
+        "content": "Using an API like the TMDB API is extremely helpful when designing a program like this. Without an exhaustive list of movies and TV shows I wouldn't be able to find out where to watch movies in one place and would have to resort to web scrape a bunch of websites that all try their best to prevent something like that.",
+        "video": "asdasdasd",
+        "videoApple": "asdasdasdasd"
+      }
+    },
+    "location": {
+      "name": "Personal Project",
+      "ref": "../projects"
+    }
   },
   "project4": {
     "id": 4,
+    "slug": "game",
     "name": "jQuery Guessing Game",
     "image": "../projects/guessing-game/home.png",
-    "image2": "../projects/guessing-game/game.png",
-    "live": "https://game.jedborseth.com"
+    "techTitles": "jQuery, HTML, CSS",
+    "introText": "The goal for this project was to create a game using jquery that incudes a character pause menu, an instructions menu, an end game menu, I also added a character select menu as a requirement to challenge myself. These requirements were to force you to update the DOM from different browser events and open menus or even change the player position.",
+    "live": "https://game.jedborseth.com",
+    "location": {
+      "name": "BCIT",
+      "ref": "https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
+    },
+    "learned": {
+      "0": {
+        "title": "Organizing Code",
+        "image": "../projects/guessing-game/game.png",
+        "content": "One of the challenges with this project was to organize a single file into different sections the javascript file ended up over 350 lines of code. Normally in a framework this wouldn't be an issue because of the ability to split sections into different files. This turned out to be a real challenge but because of my focus on staying organized it helped me with creating DRY code and being able to reuse functions.",
+        "video": "",
+        "videoApple": ""
+      }
+    }
   },
   "project5": {
     "id": 5,
-    "name": "FileZipp'r",
+    "slug": "file-zip",
+    "name": "FileUnZipper",
+    "techTitles": "PHP, TailwindCSS",
+    "introText": "This project was to help practice handling files on the server using php. I found PHP really easy to work with file in this way and I know that other languages have a really difficult time doing these things and it really shows that PHP is a really good server language for that reason.",
     "image": "../projects/file-zip/home.png",
-    "live": "https://jed.borsethdevelopers.monster/php/file-z"
+    "live": "https://jed.borsethdevelopers.monster/php/file-zip",
+    "location": {
+      "name": "BCIT",
+      "ref": "https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
+    },
+    "learned": {
+      "0": {
+        "title": "Writing PHP",
+        "image": "../projects/file-zip/upload.png",
+        "content": "When starting PHP I found the syntax very confusing and having next to no linting in vscode made it very difficult. Using PhpStorm through this project I was able to solve all my problems and have the solutions apply to any wordpress development I would do in the future by using the FTP on save feature to automatically ftp files to a development server so I wouldn't have to run a local server anymore.",
+        "video": "",
+        "videoApple": ""
+      }
+    }
   }
 }
