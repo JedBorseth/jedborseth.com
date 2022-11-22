@@ -11,6 +11,7 @@ export function getStaticPaths() {
     { params: { project: "search" } },
     { params: { project: "file-zip" } },
     { params: { project: "cookies" } },
+    { params: { project: "books" } },
   ];
 }
 const pages = ["movie-db", "threejs", "search", "game", "file-zip"];
@@ -34,6 +35,9 @@ if (page === data.project5.slug) {
 }
 if (page === data.project6.slug) {
   pageData = data.project6;
+}
+if (page === data.project7.slug) {
+  pageData = data.project7;
 }
 ---
 

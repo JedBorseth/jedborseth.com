@@ -90,6 +90,17 @@ import * as data from "../../data/projectdata.json";
               <img src={data.project6.image} alt="Project Img" width="350px" />
             </a>
           </motion.div>
+          <motion.div whileHover={{ scale: 1.15, zIndex: 20 }} client:idle
+            ><a
+              href={data.project7.live}
+              class="relative text-gray-500 transition-colors group-hover:text-violet-400"
+            >
+              &#91;Live Site&#93;
+            </a>
+            <a href={`./projects/${data.project7.slug}`} class="">
+              <img src={data.project7.image} alt="Project Img" width="350px" />
+            </a>
+          </motion.div>
         </div>
       </motion.div>
     </main>

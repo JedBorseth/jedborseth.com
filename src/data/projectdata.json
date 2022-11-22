@@ -112,7 +112,7 @@
     }
   },
   "project6": {
-    "id": 5,
+    "id": 6,
     "slug": "cookies",
     "name": "Cookie Store",
     "techTitles": "Stripe, NextJS, TailwindCSS, Recoil",
@@ -128,6 +128,28 @@
         "title": "Payment Processing",
         "image": "../projects/cookies/payment.png",
         "content": "I learned a lot about how to use stripe to create a custom payment flow that would look different to all the other sites that just redirect you to stripe to complete the payments. This I feel makes the payment look boring and not as exciting as styling it yourself and gives you more control of the payment gateway.",
+        "video": "",
+        "videoApple": ""
+      }
+    }
+  },
+  "project7": {
+    "id": 7,
+    "slug": "books",
+    "name": "Jeds Books",
+    "techTitles": "Shopify, Liquid, Password: bewhea",
+    "introText": "This website was created to help me learn how to use shopify and liquid to create a custom theme for a shopify store. I learned a lot about how to use liquid to create a custom theme and how to use shopify to create a store. I also learned how to use the shopify api to create a custom app that would help me manage a store. The Password to view the site is: bewhea",
+    "image": "../projects/books/home.png",
+    "live": "https://jed-fwd-2022.myshopify.com/",
+    "location": {
+      "name": "Personal",
+      "ref": "../projects"
+    },
+    "learned": {
+      "0": {
+        "title": "Liquid Themes",
+        "image": "../projects/books/single.png",
+        "content": "I learned a lot about how to use liquid to create a custom theme and how fast shopify is if you need to create an ecommerce site for a client as fast as possible. Although there are some limitations to what you can do with liquid it is still a very powerful tool and I would recommend it to anyone who needs to create a store quickly.",
         "video": "",
         "videoApple": ""
       }
