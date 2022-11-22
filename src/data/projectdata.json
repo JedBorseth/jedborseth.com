@@ -110,5 +110,27 @@
         "videoApple": ""
       }
     }
+  },
+  "project6": {
+    "id": 5,
+    "slug": "cookies",
+    "name": "Cookie Store",
+    "techTitles": "Stripe, NextJS, TailwindCSS, Recoil",
+    "introText": "This website helped me learn a lot about how to use stripe and how to use recoil to manage state in a react application. One thing I found challenging was using stripe to make a custom payment flow without redirecting to stripe and use their prebuilt ui. I also learned how to use the nextjs framework to create a serverless application and how deliberately using the nextjs server to protect payments from being changed on the client side.",
+    "image": "../projects/cookies/home.png",
+    "live": "https://cookie-website-ten.vercel.app",
+    "location": {
+      "name": "Personal",
+      "ref": "../projects"
+    },
+    "learned": {
+      "0": {
+        "title": "Payment Processing",
+        "image": "../projects/cookies/payment.png",
+        "content": "I learned a lot about how to use stripe to create a custom payment flow that would look different to all the other sites that just redirect you to stripe to complete the payments. This I feel makes the payment look boring and not as exciting as styling it yourself and gives you more control of the payment gateway.",
+        "video": "",
+        "videoApple": ""
+      }
+    }
   }
 }
